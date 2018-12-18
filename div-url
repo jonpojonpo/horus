@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+# this takes a url link off the morningstart index page and follows it extracting the url for financial statements 
+curl -s -L $1 | perl -ne' if( m/href=\"([^\"]+)/){ $f = $1 ; $f =~ s/amp\;//g ; print "$f\n" }' | grep div

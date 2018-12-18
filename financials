@@ -1,0 +1,19 @@
+#!/usr/bin/env python 
+
+import pandas as pd
+import sys
+
+
+baseurl='http://tools.morningstar.co.uk/uk/stockreport/' 
+endurl=sys.argv[1]
+
+types=[ 'bs','is','cf' ] 
+#dfs = pd.read_html('http://tools.morningstar.co.uk/uk/stockreport/default.aspx?tab=10&vw=is&SecurityToken=0P000090RC%5D3%5D0%5DE0EXG%24XLON&Id=0P000090RC&ClientFund=0&CurrencyId=GBP')
+
+for t in types:
+   print(t)
+   #todo sub in type for div
+   dfs = pd.read_html( baseurl + endurl)
+   df = dfs[1]
+   print(df)
+
