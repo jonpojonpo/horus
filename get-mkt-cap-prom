@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+
+./uk-stock-prices | perl -ne'if( m/\w+/ ){  s/^/mkt_cap\{EPIC=\|/;   s/ /\|\} /;   print }' | tr '|' "'"
