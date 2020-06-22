@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+while true
+do
+./get-mkt-cap-prom > /var/www/html/metrics
+sleep 3600
+done

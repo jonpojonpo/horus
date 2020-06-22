@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl -s "http://www.morningstar.co.uk/uk/equities/indexstockprices.aspx?index=FTSE_100" | perl -ne' print "$1\n" if m/(http:\/\/[^\"]+)/  ' | grep ISIN
+curl -Ls "http://www.morningstar.co.uk/uk/equities/indexstockprices.aspx?index=FTSE_100" | perl -ne' print "$1\n" if m/(http:\/\/[^\"]+)/  ' | grep ISIN

@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+
+import pandas as pd
+import os
+import sys
+
+from pandas.io.json import json_normalize
+df = pd.read_json('https://financialmodelingprep.com/api/v3/stock/real-time-price')
+df = pd.json_normalize(df.stockList)
+for index, row in df.iterrows():
+    print('stk_px{sym="' + row['symbol'] +  '"} ' + str(row['price']))
+

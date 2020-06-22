@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+curl 'https://lt.morningstar.com/api/rest.svc/klr5zyak8x/security/screener?page=1&pageSize=250&sortOrder=Name%20asc&outputType=json&version=1&languageId=en-GB&currencyId=GBP&universeIds=E0EXG%24XLON&securityDataPoints=SecId%7CLegalName%7CName%7CIndustryName%7CSectorName%7CTenforeId%7CUniverse%7CExchangeId%7CTicker%7CClosePrice%7CMarketCap%7CDividendYield%7CPERatio%7CPEGRatio%7CMarketCountryName%7CEquityStyleBox%7CReturnD1%7CReturnW1%7CReturnM1%7CReturnM3%7CReturnM6%7CReturnM0%7CReturnM12%7CReturnM36%7CReturnM60%7CReturnM120%7CEBTMarginYear1%7CROEYear1%7CROICYear1%7CEPSGrowth3YYear1%7CRevenueGrowth3Y%7CDebtEquityRatio%7CNetMargin%7CROATTM%7CROETTM&filters=EquityStyleBox%3AIN%3A2%3A1%3A4%3A7%3A5%3A9%3A8%3A6%3A3&term='$1'&subUniverseId=' \
+  -H 'Connection: keep-alive' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36' \
+  -H 'DNT: 1' \
+  -H 'Origin: https://www.morningstar.co.uk' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://www.morningstar.co.uk/' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  --compressed
